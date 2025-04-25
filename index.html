@@ -1,8 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <title>Shiny Hunt Contador</title>
-  <link rel="icon" href="Logo.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">   
+  <title>Shiny Hunt Pokedex</title>
+  <link rel="icon" href="Logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
 
     <style>
         body {
@@ -15,6 +20,7 @@
             margin: 0;
             padding: 10px;
             background-color: #f4f4f9;
+            font-family: 'Press Start 2P', cursive;
         }
 
         .contenedor {
@@ -51,22 +57,30 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-family: 'Press Start 2P', cursive;
+                font-size: 12px;
         }
 
         .pokemon:hover {
-                        transform: scale(1.05);
-                        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+                      transform: scale(1.05);
+                      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
         }
+
+        h1 {
+          font-family: 'Press Start 2P', cursive;
+          font-size: 24px;
+        }
+
     </style>
 </head>
   <body>
 
     <center>
-        <h1 style="font-family: Arial Black, sans-serif;">Pokedex Shiny Hunt</h1>
+        <h1>Pokedex Shiny Hunt</h1>
     </center>
 
 <div class="item">
-    <h1>Primera Gen</h1>
+    <u><h3>Primera Gen</h3></u>
     <div class="contenedor">
 
         <a href="Pokedex/Articuno.html" class="pokemon"> ARTICUNO </a>
@@ -79,7 +93,7 @@
     </div>  
 
 <div class="item">
-    <h1>Segunda Gen</h1>
+    <u><h3>Segunda Gen</h3></u>
     <div class="contenedor">
 
         <a href="Pokedex/Raikou.html" class="pokemon"> RAIKOU </a>
@@ -93,7 +107,7 @@
     </div>        
 
 <div class="item">
-    <h1>Tercera Gen</h1>
+    <u><h3>Tercera Gen</h3></u>
     <div class="contenedor">
 
         <a href="Pokedex/Regirock.html" class="pokemon"> REGIROCK </a>
