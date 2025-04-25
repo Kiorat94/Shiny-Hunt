@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Shiny Hunt</title>
     <link rel="icon" href="Logo.png" type="image/png">
     <style>
@@ -15,9 +16,10 @@
             height: 100vh;
             margin: 0;
             background-color: #f4f4f9;
+            font-family: 'Press Start 2P', cursive;
         }
         img {
-            width: 100px;
+            width: 150px;
             margin-bottom: 20px;
         }
         .contador {
@@ -37,6 +39,7 @@
             cursor: pointer;
             border: none;
             border-radius: 5px;
+            font-family: 'Press Start 2p', cursive;
         }
         button:hover {
             background-color: #ddd;
@@ -46,18 +49,23 @@
             font-weight: bold;
             margin: 20px 0;
         }
+        h1 {
+          font-family: 'Press Start 2P', cursive;
+          font-size: 24px;
+        }
     </style>
 </head>
 <body>
 
     <!-- Imagen encima del contador -->
-    <img src="https://images.wikidexcdn.net/mwuploads/wikidex/5/5c/latest/20180510135018/Celebi_XY_variocolor.gif" alt="Imagen decorativa">
+    <img src="Pokemon/Celebi.gif" alt="Celebi Shiny">
 
     <div class="contador">
         <h1>Celebi</h1>
         <div class="valor" id="valor">0</div>
         <div class="botones">
             <button onclick="modificarContador(1)">+1</button>
+            <button onclick="resetContador()">Reset</button>
             <button onclick="modificarContador(-1)">-1</button>
         </div>
     </div>
@@ -65,9 +73,32 @@
     <script>
         let contador = 0;
 
+        // Cargar contador guardado
+        window.onload = function() {
+            const guardado = localStorage.getItem("contadorCelebi");
+            if (guardado !== null) {
+                contador = parseInt(guardado);
+                document.getElementById('valor').textContent = contador;
+            }
+        };
+
+        // Función para sumar/restar
         function modificarContador(cambio) {
             contador += cambio;
+            if (contador < 0) contador = 0;
+            actualizarContador();
+        }
+
+        // Función para resetear
+        function resetContador() {
+            contador = 0;
+            actualizarContador();
+        }
+
+        // Actualizar y guardar
+        function actualizarContador() {
             document.getElementById('valor').textContent = contador;
+            localStorage.setItem("contadorCelebi", contador);
         }
     </script>
 
