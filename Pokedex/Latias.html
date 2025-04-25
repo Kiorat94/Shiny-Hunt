@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Hunt</title>
+    <link rel="icon" href="Logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .contador {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .botones {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 25px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+        .valor {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Imagen encima del contador -->
+    <img src="https://images.wikidexcdn.net/mwuploads/wikidex/b/bb/latest/20140930023350/Latias_XY_variocolor.gif" alt="Imagen decorativa">
+
+    <div class="contador">
+        <h1>Latias</h1>
+        <div class="valor" id="valor">0</div>
+        <div class="botones">
+            <button onclick="modificarContador(1)">+1</button>
+            <button onclick="modificarContador(-1)">-1</button>
+        </div>
+    </div>
+
+    <script>
+        let contador = 0;
+
+        function modificarContador(cambio) {
+            contador += cambio;
+            document.getElementById('valor').textContent = contador;
+        }
+    </script>
+
+</body>
+</html>
