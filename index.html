@@ -77,10 +77,20 @@
 
     <center>
         <h1>Pokedex Shiny Hunt</h1>
+
+        <input type="text" id="buscadorGeneral" placeholder="Buscar Pokémon..." onkeyup="filtrarGeneral()" style="margin: 20px; padding: 10px; width: 80%; max-width: 400px; font-family: 'Press Start 2P', cursive;">
+
     </center>
 
+        <a href="Shinylist.html" class="pokemon"> CheckList </a>  
+        <br>
+
 <div class="item">
-    <u><h3>Primera Gen</h3></u>
+
+    <u><h3>Primera Generacion</h3></u>
+
+    <br> 
+
     <div class="contenedor">
 
         <a href="Pokedex/Charmander.html" class="pokemon"> CHARMANDER </a>
@@ -91,12 +101,18 @@
         <a href="Pokedex/Moltres.html" class="pokemon"> MOLTRES </a>
         <a href="Pokedex/Mew.html" class="pokemon"> MEW </a>
         <a href="Pokedex/Mewtwo.html" class="pokemon"> MEWTWO </a>
+    </ul>    
 
 </div>
     </div>  
 
 <div class="item">
-    <u><h3>Segunda Gen</h3></u>
+
+
+    <u><h3>Segunda Generacion</h3></u>
+
+    <br>
+
     <div class="contenedor">
 
         <a href="Pokedex/Raikou.html" class="pokemon"> RAIKOU </a>
@@ -108,9 +124,13 @@
 
 </div>
     </div>        
-
+   
 <div class="item">
-    <u><h3>Tercera Gen</h3></u>
+
+    <u><h3>Tercera Generacion</h3></u>
+
+    <br>
+
     <div class="contenedor">
 
         <a href="Pokedex/Torchic.html" class="pokemon"> TORCHIC </a>
@@ -129,6 +149,19 @@
 </div>        
     </div>
 
+<script>
+function filtrarGeneral() {
+    const texto = document.getElementById("buscadorGeneral").value.toLowerCase();
+    const todosLosPokemones = document.querySelectorAll('.pokemon');
+
+    todosLosPokemones.forEach(pokemon => {
+        const nombre = pokemon.textContent.toLowerCase();
+        pokemon.style.display = nombre.includes(texto) ? 'flex' : 'none';
+    });
+}
+</script>
+
 
   </body> 
+  v0.2
 </html>
