@@ -1,0 +1,133 @@
+
+        .contenedor {
+                   display: flex;
+                   flex-wrap: wrap;
+                   width: 100%;
+                   max-width: 400px;
+                   gap: 15px;
+                   justify-content: center;
+        }
+
+        .item {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+
+        }
+
+        .pokemon {
+                flex: 0 0 calc(20% - 10px);
+                padding: 12px 5px; 
+                background-color: white; 
+                color: black; 
+                text-decoration: none; 
+                border:2px solid black; 
+                border-radius: 10px; 
+                box-shadow: 2px 2px 0 black;  
+                transition: all 0.2s;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Press Start 2P', cursive;
+                font-size: 12px;
+
+        }
+
+        .pokemon:hover {
+                      transform: scale(1.05);
+                      box-shadow: 0px 0px 0 black;
+                      background-color: #9ACD32;
+        }
+
+        h1 {
+          font-family: 'Press Start 2P', cursive;
+          font-size: 24px;
+        }
+
+        #resetearTodo {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    font-family: 'Press Start 2P', cursive;
+                    font-size: 10px;
+                    background-color: #ff5c5c;
+                    color: white;
+                    border: 2px solid black;
+                    padding: 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    z-index: 999;
+                    box-shadow: 3px 3px 0 black;
+                    transition: all 0.2s;
+        }
+
+       #resetearTodo:hover {
+                          background-color: #ff1c1c;
+                          transform: scale(1.05);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        h1 {
+          font-family: 'Press Start 2P', cursive;
+          font-size: 24px;
+        }
+        
+        .numero {
+               font-size: 15px;
+               color: #888;
+               margin-right: 12px;
+        }
+
+        .volver {
+                flex: 0 0 calc(20% - 10px); 
+                padding: 12px 5px; 
+                background-color: #ff5c5c; 
+                color: black; 
+                text-decoration: none; 
+                border:2px solid black; 
+                border-radius: 10px; 
+                box-shadow: 2px 2px 0 black;  
+                transition: all 0.2s;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Press Start 2P', cursive;
+                font-size: 12px;
+        }
+
+        .volver:hover {
+                      transform: scale(1.05);
+                      box-shadow: 0px 0px 0 black;
+                      background-color: #ff1c1c;
+                      color: white;
+        }

@@ -2,14 +2,16 @@
 <html lang="es">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">   
-  <title>Shiny Hunt Pokedex</title>
-  <link rel="icon" href="Logo.png" type="image/png">
+  <meta charset="UTF-8"> 
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  
+  <title>Shiny Hunt Pokedex</title>
 
-
+  <link rel="icon" href="Logo.png" type="image/png">
 
     <style>
+
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -23,59 +25,13 @@
             font-family: 'Press Start 2P', cursive;
         }
 
-        .contenedor {
-                   display: flex;
-                   flex-wrap: wrap;
-                   width: 100%;
-                   max-width: 400px;
-                   gap: 15px;
-                   justify-content: center;
-        }
-
-        .item {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-
-        }
-
-        .pokemon {
-                flex: 0 0 calc(20% - 10px);
-                padding: 10px 5px; 
-                background-color: f9f9f9; 
-                color: black; 
-                text-decoration: none; 
-                border:1px solid black; 
-                border-radius: 20px; 
-                font-family: Arial, sans-serif;
-                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9); 
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family: 'Press Start 2P', cursive;
-                font-size: 12px;
-        }
-
-        .pokemon:hover {
-                      transform: scale(1.05);
-                      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
-        }
-
-        h1 {
-          font-family: 'Press Start 2P', cursive;
-          font-size: 24px;
-        }
-
     </style>
+
 </head>
   <body>
 
     <center>
+        
         <h1>Pokedex Shiny Hunt</h1>
 
         <input type="text" id="buscadorGeneral" placeholder="Buscar Pokémon..." onkeyup="filtrarGeneral()" style="margin: 20px; padding: 10px; width: 80%; max-width: 400px; font-family: 'Press Start 2P', cursive;">
@@ -100,8 +56,7 @@
         <a href="Pokedex/Zapdos.html" class="pokemon"> ZAPDOS </a>
         <a href="Pokedex/Moltres.html" class="pokemon"> MOLTRES </a>
         <a href="Pokedex/Mew.html" class="pokemon"> MEW </a>
-        <a href="Pokedex/Mewtwo.html" class="pokemon"> MEWTWO </a>
-    </ul>    
+        <a href="Pokedex/Mewtwo.html" class="pokemon"> MEWTWO </a>  
 
 </div>
     </div>  
@@ -161,7 +116,26 @@ function filtrarGeneral() {
 }
 </script>
 
+<script>
+    // Espera a que cargue la pagina no desesperes
+    document.addEventListener('DOMContentLoaded', function () {
+        const btnReset = document.getElementById('resetearTodo');
+
+        if (btnReset) {
+            btnReset.addEventListener('click', function () {
+                if (confirm("¿Seguro que querés borrar TODO el progreso? Esta acción no se puede deshacer.")) {
+                    localStorage.clear();
+                    location.reload(); // esto recarga la pagina para los cambios
+                }
+            });
+        }
+    });
+</script>
+
+
+<button id="resetearTodo">🗑️ Reiniciar Progreso</button>
+<br>
 
   </body> 
-  v0.2
+  v0.3
 </html>
