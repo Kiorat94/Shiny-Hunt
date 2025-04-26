@@ -1,0 +1,106 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#pokemon-container {
+    background-color: white;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 black;
+    margin-bottom: 20px;
+}
+
+#pokemon-img {
+    width: 120px;
+    height: 120px;
+}
+
+#vida {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#click-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: all 0.1s;
+    border-radius: 10px;
+    background-color: #48ee35;
+    box-shadow: 2px 2px 0 black;
+    font-family: 'Press Start 2p', cursive;
+}
+
+#click-button:hover {
+    background-color: #ee3d3d;
+    box-shadow: 0px 0px 0 black;
+    transform: scale(1.05);
+}
+
+#contador-total {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+#derrotados {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#derrotados img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 0 black;
+}
+
+        .pokemon {
+                flex: 0 0 calc(20% - 10px);
+                padding: 12px 5px; 
+                background-color: #ff5c5c; 
+                color: black; 
+                text-decoration: none; 
+                border:2px solid black; 
+                border-radius: 10px; 
+                box-shadow: 2px 2px 0 black;  
+                transition: all 0.2s;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Press Start 2P', cursive;
+                font-size: 12px;
+        }
+
+        .pokemon:hover {
+                      transform: scale(1.05);
+                      box-shadow: 0px 0px 0 black;
+                      background-color: #ff1c1c;
+                      color: white;
+        }
+
+        .contenedor {
+                   display: flex;
+                   flex-wrap: wrap;
+                   width: 100%;
+                   max-width: 400px;
+                   gap: 15px;
+                   justify-content: center;
+        }     

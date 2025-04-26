@@ -67,6 +67,7 @@
 
        #resetearTodo:hover {
                           background-color: #ff1c1c;
+                          box-shadow: 0px 0px 0 black;
                           transform: scale(1.05);
         }
 
@@ -130,4 +131,28 @@
                       box-shadow: 0px 0px 0 black;
                       background-color: #ff1c1c;
                       color: white;
+        }
+
+        .clicker {
+                    position: bottom;
+                    text-decoration: none;
+                    bottom: 20px;
+                    right: 20px;
+                    font-family: 'Press Start 2P', cursive;
+                    font-size: 10px;
+                    background-color: #85e9eb;
+                    color: black;
+                    border: 2px solid black;
+                    padding: 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    z-index: 999;
+                    box-shadow: 3px 3px 0 black;
+                    transition: all 0.2s;
+        }
+
+       .clicker:hover {
+                          background-color: #27c8de;
+                          box-shadow: 0px 0px 0 black;
+                          transform: scale(1.05);
         }
